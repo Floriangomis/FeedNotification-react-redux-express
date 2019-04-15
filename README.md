@@ -1,3 +1,5 @@
+![alt text](https://raw.githubusercontent.com/Floriangomis/FeedNotification-react-redux-express/master/src/assets/images/screen.PNG)
+
 # To notice
 
 This project is using Prettier and Eslint.
