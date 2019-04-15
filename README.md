@@ -1,29 +1,41 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# To notice
 
-#Settings.json for VSCode :
+This project is using Prettier and Eslint.
+Before any commit eslint is executed to check the code.
+It will also run all the unit test before to push anything.
+
+# How to run this ?
+
+To run the unit test type this command in your CLI once you're at the root of the folder project.
 
 ```
-{
-  "typescript.check.npmIsInstalled": false,
-  "window.zoomLevel": -1,
-
-  "git.enabled": true,
-  "git.path": "/usr/bin/git",
-  "workbench.colorTheme": "Activate SCARLET protocol (beta)",
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "editor.formatOnSave": true,
-  "typescriptHero.imports.organizeOnSave": true,
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
-}
+npm run test
 ```
 
-With those settings I am using different extention :
+To run the API :
 
--   Auto Import - ES6, TS ...
--   CyberPunk ( Theme )
--   Git Blame
--   Npm intellisense
--   Prettier - Code formatter
--   Typescript Hero ( Allow me to sort my import properly on save )
+```
+npm run server
+```
+
+You can then access it with your browser at : http://localhost:3010/api/notifications ( There is only one endpoint )
+
+To run the react application :
+
+```
+npm run start
+```
+
+You can then access it with your browser at : http://localhost:3000/
+
+If you want to run the linter
+
+```
+./node_modules/.bin/eslint ./src/**/*.js
+```
+
+If you want to reformat your code according to the prettier configuration. ( In case you don't have this configured directly inside your IDE )
+
+```
+npm run prettier
+```

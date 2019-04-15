@@ -1,0 +1,23 @@
+.like-item {
+	display: flex;
+	font-size: 11px;
+
+	.picture {
+		padding: 6px;
+		img {
+			max-height: 44px;
+			max-width: 50px;
+		}
+	}
+
+	.name {
+		color: #3b5998;
+		font-weight: bold;
+		cursor: pointer;
+	}
+
+	.informations {
+		padding: 6px;
+		padding-top: 12px;
+	}
+}

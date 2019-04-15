@@ -1,0 +1,40 @@
+.modal-container {
+	position: absolute;
+	right: 0;
+	width: 400px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	box-shadow: 10px 10px 20px grey;
+	border: 1px solid darkgray;
+	background-color: white;
+	opacity: 0;
+	transition-duration: 200ms;
+	z-index: 1;
+
+	max-height: 400px;
+	overflow: auto;
+	&.open {
+		overflow-y: auto;
+		opacity: 1;
+		transition-duration: 200ms;
+	}
+}
+
+.arrow-modal {
+	position: absolute;
+	right: 60px;
+	top: -15px;
+
+	border-left: 16px solid transparent;
+	border-right: 16px solid transparent;
+	border-bottom: 16px solid white;
+
+	opacity: 0;
+	transition-duration: 200ms;
+	z-index: 2;
+
+	&.open {
+		opacity: 1;
+		transition-duration: 200ms;
+	}
+}

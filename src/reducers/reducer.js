@@ -1,30 +1,42 @@
-import { actionType } from '../actions/actions';
+import { actionType } from './../actions/actions';
 
 const initialState = {
-	properties: [
-		{
-			id: 1,
-			title: 'Hello',
-		},
-		{
-			id: 2,
-			title: 'World',
-		},
-	],
+	notifications: [],
+	modalState: {
+		open: false,
+	},
+	header: {
+		hasNotification: false,
+		numberOfNotifications: 0,
+	},
 };
 
 export const reducer = (state = initialState, action) => {
 	switch (action.type) {
-		case actionType.UPDATE_PROPERTY: {
-			const { id, title } = action.payload;
-			return {
-				properties: state.properties.map(property => {
-					if (property.id === id) {
-						property.title = title;
-					}
-					return property;
-				}),
-			};
+		case actionType.TOOGLE_MODAL: {
+			return Object.assign({}, state, {
+				modalState: {
+					open: !state.modalState.open,
+				},
+			});
+		}
+		case actionType.UPDATE_NOTIFICATIONS: {
+			return Object.assign({}, state, { notifications: action.payload });
+		}
+		case actionType.HAS_NOTIFICATION: {
+			return Object.assign({}, state, {
+				header: {
+					hasNotification: true,
+					numberOfNotifications: action.payload.numberOfNotifications,
+				},
+			});
+		}
+		case actionType.ADD_NOTIFICATION: {
+			const tmp = [...state.notifications];
+			tmp.unshift(action.payload);
+			return Object.assign({}, state, {
+				notifications: tmp,
+			});
 		}
 		default:
 			return state;

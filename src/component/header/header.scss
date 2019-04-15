@@ -1,0 +1,28 @@
+.header {
+	color: white;
+	background-color: #3b5998;
+	height: 60px;
+
+	.notification-btn {
+		position: absolute;
+		right: 60px;
+		width: 30px;
+		height: 30px;
+		background-image: url('../../assets/icons/earth.svg');
+		text-align: center;
+		border-radius: 20px;
+		cursor: pointer;
+
+		.notification-counter {
+			position: absolute;
+			right: -10px;
+			top: 10px;
+			line-height: 1.8;
+			width: 20px;
+			height: 20px;
+			border-radius: 20px;
+			background-color: red;
+			font-size: 10px;
+		}
+	}
+}
